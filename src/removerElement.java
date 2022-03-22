@@ -1,7 +1,7 @@
 public class removerElement {
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 3, 4, 3, 5, 6, 3, 7 };
-        removeElement(nums, 1);
+        int[] nums = { 1, 2, 3, 4, 3, 5, 6, 7 };
+        removeElement(nums, 3);
         for (int x = 0; x < nums.length; x++)
             System.out.print(nums[x] + " ");
     }
