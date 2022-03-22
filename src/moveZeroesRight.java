@@ -1,27 +1,30 @@
 public class moveZeroesRight {
     public static void main(String[] args) {
-        int orgArr[] = { 1, 0, 6, 0, 3, 0, 2, 0, 6, 8, 4, 6, 0, 0, 3, 0, 0, 0, 2, 0, 3 };
-        int i = 0;
-        int j = 1;
-        while (j < orgArr.length) {
+        int[] nums = { 1, 0, 6, 0, 3, 0, 2, 0, 6, 8, 4, 6, 3, 2, 0, 3 };
+        // int[] nums={0,1,0,3,12};
+        moveZeroes(nums);
+        for (int i = 0; i < nums.length; i++) {
+            System.out.println(nums[i]);
+        }
+    }
 
-            if (orgArr[i] != 0 && orgArr[j] == 0) {
-                i++;
-            } else if (orgArr[i] == 0 && orgArr[j] == 0) {
-                j++;
-            } else if (orgArr[i] == 0 && orgArr[j] != 0) {
-                int temp = orgArr[i];
-                orgArr[i] = orgArr[j];
-                orgArr[j] = temp;
-                i++;
-                j++;
-            } else if (orgArr[i] == 0 && orgArr[j] != 0) {
-                j++;
+    static void moveZeroes(int[] nums) {
+        int l = 0;
+        int r = 1;
+        while (r < nums.length) {
+            if (nums[l] != 0) {
+                r++;
+                l++;
+            } else if (nums[r] == 0) {
+                r++;
+            } else {
+                int temp = nums[r];
+                nums[r] = nums[l];
+                nums[l] = temp;
             }
 
         }
-        for (i = 0; i < orgArr.length; i++) {
-            System.out.println(orgArr[i]);
-        }
+
     }
+
 }
