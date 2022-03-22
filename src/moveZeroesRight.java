@@ -1,7 +1,6 @@
 public class moveZeroesRight {
     public static void main(String[] args) {
         int[] nums = { 1, 0, 6, 0, 3, 0, 2, 0, 6, 8, 4, 6, 3, 2, 0, 3 };
-        // int[] nums={0,1,0,3,12};
         moveZeroes(nums);
         for (int i = 0; i < nums.length; i++) {
             System.out.println(nums[i]);
