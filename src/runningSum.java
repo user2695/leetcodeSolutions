@@ -5,7 +5,6 @@ public class runningSum {
         for (int i = 0; i < nums.length; i++)
             System.out.print(nums[i] + " ");
     }
-
     static int[] runingSum(int nums[]) {
         int n = nums.length;
         int sum = 0;
