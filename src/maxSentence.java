@@ -1,6 +1,6 @@
 public class maxSentence {
     public static void main(String[] args) {
-        String[] sentences = { "alice and bob love leetcode and done", "i think so too",
+        String[] sentences = { "alice and bob love leetcode and done can be first sentence", "i think so too",
                 "this is great thanks very much" };
         System.out.println(maxWords(sentences));
     }
@@ -13,5 +13,4 @@ public class maxSentence {
         }
         return length;
     }
-
 }
