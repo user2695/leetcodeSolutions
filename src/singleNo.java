@@ -1,7 +1,7 @@
 public class singleNo {
     public static void main(String[] args) {
-        int[] arr = { 4, 1, 2, 1, 2 };
-        System.out.println(singleNumber(arr));
+        int[] nums = { 4, 1, 2, 1, 2 };
+        System.out.println(singleNumber(nums));
     }
 
     static int singleNumber(int[] nums) {
