@@ -5,14 +5,17 @@ public class maxSubArraySum {
     }
 
     static int maxSubArray(int[] nums) {
-        int maxSum = nums[0], curSum = 0;
+        int sum = 0;
+        int res = Integer.MIN_VALUE;
         for (int i = 0; i < nums.length; i++) {
-            curSum += nums[i];
-            if (curSum > maxSum)
-                maxSum = curSum;
-            if (curSum < 0)
-                curSum = 0;
+            sum += nums[i];
+            if (sum > res) {
+                res = sum;
+            }
+            if (sum < 0) {
+                sum = 0;
+            }
         }
-        return maxSum;
+        return res;
     }
 }
