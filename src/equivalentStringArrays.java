@@ -1,7 +1,7 @@
 public class equivalentStringArrays {
     public static void main(String[] args) {
-        String[] s1 = { "a", "bc" };
-        String[] s2 = { "ab", "c" };
+        String[] s1 = { "a", "bcd" };
+        String[] s2 = { "ab", "cd" };
 
         System.out.println(arrayStringsAreEqual(s1, s2));
     }
