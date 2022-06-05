@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -25,6 +24,7 @@ class twoOutOfThree {
         for (int i : nums3)
             if (set.contains(i))
                 result.add(i);
-        return new ArrayList(result);
+        List<Integer> ans=new ArrayList<>(result);
+        return ans;
     }
 }
