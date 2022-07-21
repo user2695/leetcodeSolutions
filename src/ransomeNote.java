@@ -5,16 +5,15 @@ public class ransomeNote {
     }
 
     static boolean canConstruct(String ransomNote, String magazine) {
-        boolean ans = true;
-        for (int i = 0; i < ransomNote.length(); i++) {
-            for (int j = 0; j < magazine.length(); j++) {
-                if (ransomNote.charAt(i) == magazine.charAt(j)) {
-                    continue;
-                } else if (ransomNote.charAt(i) != magazine.charAt(j)) {
-                    ans = false;
-                }
-            }
+        int[] alphabets_counter = new int[26];
+        
+        for (char c : magazine.toCharArray())
+            alphabets_counter[c-'a']++;
+
+        for (char c : ransomNote.toCharArray()){
+            if (alphabets_counter[c-'a'] == 0) return false;
+            alphabets_counter[c-'a']--;
         }
-        return ans;
+        return true;
     }
 }
